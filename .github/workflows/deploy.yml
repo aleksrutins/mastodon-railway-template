@@ -1,6 +1,11 @@
 name: Deploy
 
 on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: The Mastodon tag to build.
+        type: string
   push:
     branches:
       - main
